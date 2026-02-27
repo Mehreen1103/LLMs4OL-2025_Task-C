@@ -25,7 +25,7 @@ This design reduces noise, improves scalability, and enables directional is-a pr
 
 > Replace `methodology.png` with your actual diagram filename
 
-![Methodology Diagram](methodology.png)
+![Methodology Diagram](methodlogy.png)
 
 ---
 
@@ -116,24 +116,26 @@ This is the **final and most scalable system**.
 [
   {"parent": "distillation", "child": "simple distillation"}
 ]
-🚀 How to Run
-1️⃣ Install Dependencies
-pip install sentence-transformers scikit-learn tqdm unsloth
-2️⃣ Prepare Input
 
-Place:
+# ===============================
+# 🚀 Quick Run (Kaggle / Local)
+# ===============================
 
-obi_test_types.txt
+# 1️⃣ Install dependencies
+pip install sentence-transformers scikit-learn tqdm unsloth torch transformers
 
-inside:
+# 2️⃣ Place input file
+# Put: obi_test_types.txt
+# Path (Kaggle): /kaggle/input/data-ontology/obi_test_types.txt
+# Path (Local):  ./obi_test_types.txt
 
-/kaggle/input/data-ontology/
-3️⃣ Run Final Pipeline
+# 3️⃣ Run the pipeline
+python sentence_embeddings_llm.py
 
-Execute:
+# 4️⃣ Output will be saved to:
+# outputs/obi_pairs.json
 
-sentence-embeddings-llm.ipynb
-
-Output will be saved to:
-
-outputs/obi_pairs.json
+# ===============================
+# 🧪 Optional: Cosine baseline
+# ===============================
+python cosine_similarity.py
