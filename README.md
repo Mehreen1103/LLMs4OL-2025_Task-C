@@ -25,7 +25,7 @@ This design reduces noise, improves scalability, and enables directional is-a pr
 
 > Replace `methodology.png` with your actual diagram filename
 
-![Methodology Diagram](methodlogy.png)
+![Methodology Diagram](methodology.png)
 
 ---
 
