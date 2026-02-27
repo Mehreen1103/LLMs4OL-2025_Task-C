@@ -23,7 +23,7 @@ This design reduces noise, improves scalability, and enables directional is-a pr
 
 Replace methodology.png with your actual diagram filename
 
-![Methodology Diagram](methodology.png)
+![Methodology Diagram](methodlogy.png)
 ⚙️ Pipeline
 Stage 1 — Sentence Embeddings
 
