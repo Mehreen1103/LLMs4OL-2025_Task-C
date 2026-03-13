@@ -100,42 +100,27 @@ This is the **final and most scalable system**.
 ├── methodology.png
 └── README.md
 
----
+## Data
 
-# 📥 Input Format
+The dataset is publicly available from the official challenge repository:
 
-`obi_test_types.txt`
+🔗 https://github.com/sciknoworg/LLMs4OL-Challenge/tree/main/2025/TaskC-TaxonomyDiscovery/OBI
 
----
+| File | Split | Description |
+|------|-------|-------------|
+| `obitrainpairs.json` | Train | 8,249 labeled is-a pairs |
+| `obitraintypes.txt` | Train | 4,237 unique ontology types |
+| `obitesttypes.txt` | Test | 2,821 ontology types |
 
-# 📤 Output Format
+> **Do not re-upload the data to this repo.** Download directly from the source above.
 
-`obi_pairs.json`
+## How to Run
 
-```json
+1. Clone the official challenge repo or download the OBI files directly
+2. On Kaggle: upload the files as a dataset named `data-ontology`
+3. Open any notebook and run all cells
+4. Output saved to `outputs/submission_pairs.json`
 [
   {"parent": "distillation", "child": "simple distillation"}
 ]
 
-# ===============================
-# 🚀 Quick Run (Kaggle / Local)
-# ===============================
-
-# 1️⃣ Install dependencies
-pip install sentence-transformers scikit-learn tqdm unsloth torch transformers
-
-# 2️⃣ Place input file
-# Put: obi_test_types.txt
-# Path (Kaggle): /kaggle/input/data-ontology/obi_test_types.txt
-# Path (Local):  ./obi_test_types.txt
-
-# 3️⃣ Run the pipeline
-python sentence_embeddings_llm.py
-
-# 4️⃣ Output will be saved to:
-# outputs/obi_pairs.json
-
-# ===============================
-# 🧪 Optional: Cosine baseline
-# ===============================
-python cosine_similarity.py
